@@ -14,6 +14,9 @@
 		983D519A1F0159110048D2EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983D51981F0159110048D2EB /* LaunchScreen.storyboard */; };
 		983D51A51F0159110048D2EB /* Divvy_Bike_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D51A41F0159110048D2EB /* Divvy_Bike_AppTests.swift */; };
 		983D51B01F0159110048D2EB /* Divvy_Bike_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D51AF1F0159110048D2EB /* Divvy_Bike_AppUITests.swift */; };
+		983D51BE1F015A020048D2EB /* SwiftyJSON-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D51BD1F015A020048D2EB /* SwiftyJSON-1.swift */; };
+		983D51C01F0167AC0048D2EB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D51BF1F0167AC0048D2EB /* DetailViewController.swift */; };
+		983D51C21F0175A80048D2EB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983D51C11F0175A80048D2EB /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		983D51AB1F0159110048D2EB /* Divvy Bike AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Divvy Bike AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		983D51AF1F0159110048D2EB /* Divvy_Bike_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divvy_Bike_AppUITests.swift; sourceTree = "<group>"; };
 		983D51B11F0159110048D2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		983D51BD1F015A020048D2EB /* SwiftyJSON-1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftyJSON-1.swift"; sourceTree = "<group>"; };
+		983D51BF1F0167AC0048D2EB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		983D51C11F0175A80048D2EB /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				983D518F1F0159110048D2EB /* AppDelegate.swift */,
+				983D51BD1F015A020048D2EB /* SwiftyJSON-1.swift */,
 				983D51911F0159110048D2EB /* ViewController.swift */,
 				983D51931F0159110048D2EB /* Main.storyboard */,
+				983D51C11F0175A80048D2EB /* MapViewController.swift */,
+				983D51BF1F0167AC0048D2EB /* DetailViewController.swift */,
 				983D51961F0159110048D2EB /* Assets.xcassets */,
 				983D51981F0159110048D2EB /* LaunchScreen.storyboard */,
 				983D519B1F0159110048D2EB /* Info.plist */,
@@ -261,6 +270,9 @@
 			files = (
 				983D51921F0159110048D2EB /* ViewController.swift in Sources */,
 				983D51901F0159110048D2EB /* AppDelegate.swift in Sources */,
+				983D51BE1F015A020048D2EB /* SwiftyJSON-1.swift in Sources */,
+				983D51C21F0175A80048D2EB /* MapViewController.swift in Sources */,
+				983D51C01F0167AC0048D2EB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
