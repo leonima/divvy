@@ -10,20 +10,42 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController
+class MapViewController: UIViewController, CLLocationManagerDelegate
 {
+
+    var detailItems:[[String: String]]!
+    
     @IBOutlet weak var myMap: MKMapView!
     
-    var detailItemTwo:[[String: String]]!
+    var manager = CLLocationManager()
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let location = locations[0]
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.1, 0.1)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        myMap.setRegion(region, animated: true)
+        
+        self.myMap.showsUserLocation = true
+    }
+    
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        for i in detailItemTwo
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        for items in detailItems
         {
-            var centerLocation = CLLocationCoordinate2DMake(Double(detailItemTwo["latitude"]!)!, Double(detailItemTwo["longitude"]!)!)
+            var centerLocation = CLLocationCoordinate2DMake(Double(items["latitude"]!)!, Double(items["longitude"]!)!)
             
-            var mapSpan = MKCoordinateSpanMake(0.01, 0.01)
+            var mapSpan = MKCoordinateSpanMake(0.08, 0.08)
             
             var mapRegion = MKCoordinateRegionMake(centerLocation, mapSpan)
             
@@ -32,9 +54,9 @@ class MapViewController: UIViewController
             
             self.myMap.setRegion(mapRegion, animated: true)
             self.myMap.addAnnotation(annotation)
-            annotation.title = detailItemTwo["stationName"]
-            annotation.subtitle = detailItemTwo["city"]
+            annotation.title = items["stationName"]
+            annotation.subtitle = items["city"]
         }
     }
-
+  
 }

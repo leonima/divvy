@@ -56,20 +56,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myTableView.reloadData()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.identifier == "yo"
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?)
         {
-            let divvyStation = bikeStations[indexPath.row]
-            let dvc = segue.destination as! DetailViewController
-            dvc.detailItem = divvyStation
+            if segue.identifier == "yo"
+            {
+                if let indexPath = myTableView.indexPathForSelectedRow
+                {
+                let divvyStation = bikeStations[indexPath.row]
+                var dvc = segue.destination as! DetailViewController
+                dvc.detailItem = divvyStation
+                }
+            }
+        
+            if segue.identifier == "hi"
+            {
+                let divvyStations = bikeStations
+                var mvc = segue.destination as! MapViewController
+                mvc.detailItems = divvyStations
+            }
         }
-        if let indexPath = myTableView.indexPathForSelectedRow
-        {
-            let divvyStation = bikeStations[indexPath.row]
-            let mvc = segue.destination as! MapViewController
-            mvc.detailItemTwo = divvyStation
-        }
-    }
+    
 }
+
 

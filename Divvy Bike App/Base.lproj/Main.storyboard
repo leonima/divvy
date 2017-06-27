@@ -74,6 +74,7 @@
                     <navigationItem key="navigationItem" id="3N1-8K-2bw">
                         <barButtonItem key="rightBarButtonItem" title="Divvies Near Me" id="Uxo-vq-4Nx">
                             <connections>
+                                <action selector="divviesNearMeButton:" destination="BYZ-38-t0r" id="KFH-6F-9IZ"/>
                                 <segue destination="reT-vy-Yci" kind="show" identifier="hi" id="0dn-sH-bDR"/>
                             </connections>
                         </barButtonItem>
